@@ -31,8 +31,8 @@ export default function MyApp ({ Component, pageProps, config, locale }) {
               />
             )}
             {process.env.VERCEL_ENV === 'production' && config?.analytics?.provider === 'ga' && <Gtag />}
-            {process.env.VERCEL_ENV === 'production' && config?.analytics?.provider === 'vercel' && <Analytics />}
             <Component {...pageProps} />
+            <Analytics />
           </>
         </ThemeProvider>
       </LocaleProvider>
