@@ -40,7 +40,7 @@ const BLOG = {
     // support provider: gitalk, utterances, cusdis
     provider: 'gitalk', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
-      repo: 'https://github.com/psychopasss/mygitalk.git', // The repository of store comments
+      repo: 'mygitalk', // The repository of store comments
       owner: 'psychopasss',
       admin: ['psychopasss'],
       clientID: process.env.GITALK_CLIENT_ID,
