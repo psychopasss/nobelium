@@ -1,7 +1,7 @@
 const BLOG = {
   title: "Zain's Blog",
   author: 'Zain',
-  email: 'x308989414@gmail.com',
+  email: 'zaingg@qq.com',
   link: 'https://blog.izain.cn',
   description: 'keep your mind',
   lang: 'zh-CN', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
@@ -38,20 +38,20 @@ const BLOG = {
   },
   comment: {
     // support provider: gitalk, utterances, cusdis
-    provider: 'cusdis', // leave it empty if you don't need any comment plugin
+    provider: 'gitalk', // leave it empty if you don't need any comment plugin
     gitalkConfig: {
-      repo: '', // The repository of store comments
-      owner: '',
-      admin: [],
-      clientID: '',
-      clientSecret: '',
+      repo: 'https://github.com/psychopasss/mygitalk.git', // The repository of store comments
+      owner: 'psychopasss',
+      admin: ['psychopasss'],
+      clientID: process.env.GITALK_CLIENT_ID,
+      clientSecret: process.env.GITALK_CLIENT_SECRET,
       distractionFreeMode: false
     },
     utterancesConfig: {
       repo: ''
     },
     cusdisConfig: {
-      appId: 'f0b298ea-9e6d-4211-bc07-81fda1414866', // data-app-id
+      appId: '', // data-app-id
       host: 'https://cusdis.com', // data-host, change this if you're using self-hosted version
       scriptSrc: 'https://cusdis.com/js/cusdis.es.js' // change this if you're using self-hosted version
     }
