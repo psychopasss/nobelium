@@ -54,6 +54,9 @@ const Comments = ({ frontMatter }) => {
       {BLOG.comment && BLOG.comment.provider === 'utterances' && (
         <UtterancesComponent issueTerm={frontMatter.id} />
       )}
+      {BLOG.comment && BLOG.comment.provider === 'giscus' && (
+        <GiscusComponent/>
+      )}
       {BLOG.comment && BLOG.comment.provider === 'cusdis' && (
         <CusdisComponent
           lang={fetchCusdisLang(BLOG.lang)}
