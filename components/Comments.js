@@ -58,18 +58,18 @@ const Comments = ({ frontMatter }) => {
       {BLOG.comment && BLOG.comment.provider === 'giscus' && (
         <Giscus
           id="comments"
-          repo="psychopasss/mygitalk"
-          repoId="R_kgDOMf5u7A"
-          category="Announcements"
-          categoryId="DIC_kwDOMf5u7M4Chcvl"
-          mapping="pathname"
+          repo={BLOG.comment.giscusConfig.repo} 
+          repoId={BLOG.comment.giscusConfig.repoId}
+          category={BLOG.comment.giscusConfig.category}
+          categoryId={BLOG.comment.giscusConfig.categoryId}
+          mapping={BLOG.comment.giscusConfig.mapping}
           term="Welcome to @giscus/react component!"
-          reactionsEnabled="1"
+          reactionsEnabled={BLOG.comment.giscusConfig.reactionsEnabled}
           emitMetadata="0"
-          inputPosition="top"
-          theme="light"
-          lang="zh-CN"
-          loading="lazy"
+          inputPosition={BLOG.comment.giscusConfig.inputPosition}
+          theme={BLOG.comment.giscusConfig.theme}
+          lang={BLOG.comment.giscusConfig.lang}
+          loading={BLOG.comment.giscusConfig.loading}
         />
       )}
       {BLOG.comment && BLOG.comment.provider === 'cusdis' && (
